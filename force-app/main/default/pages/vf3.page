@@ -1,0 +1,39 @@
+<apex:page standardController="Account"  extensions="extension1" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page: vf2
+  <!-- End Default Content REMOVE THIS -->
+
+  <apex:form >
+ 
+  <apex:pageblock >
+  
+  <apex:pageblockSection >
+  <apex:inputfield value="{!account.name}" label="Name"/>
+  <apex:inputfield value="{!account.type}" label="Type"/>
+  <apex:inputfield value="{!account.rating}" label="Rating"/>
+ <apex:inputfield value="{!account.annualrevenue}" label="annualrevenue"/>
+  
+  
+  
+  </apex:pageblockSection>
+  <apex:pageblockbuttons >
+  <apex:commandButton action="{!Save}" value="Save"/>
+    <apex:commandButton action="{!Delete}" value="Delete"/>
+    <apex:commandButton action="{!Cancel}" value="Cancel"/>
+  
+  </apex:pageblockbuttons>
+  
+    </apex:pageblock>
+      </apex:form>
+      <apex:pageblock >
+  
+  <apex:PageBlockTable value="{!acclist}" var="ac">
+  <apex:column value="{!ac.name}"/>
+    <apex:column value="{!ac.industry}"/>
+      <apex:column value="{!ac.type}"/>
+  
+  </apex:PageBlockTable>
+  
+    </apex:pageblock>
+</apex:page>

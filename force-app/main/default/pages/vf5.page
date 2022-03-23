@@ -1,0 +1,16 @@
+<apex:page controller="accountpaginationcontroller"  >
+    <apex:form >
+    <apex:pageblock >
+    <apex:pageblocktable value="{!cs2}" var="c" >
+        <apex:column value="{!c.casenumber}"/>
+   </apex:pageblocktable>
+        
+   
+    
+   
+    </apex:pageblock>
+    <apex:pageblock >
+     <apex:commandButton action="{!next}" value="next" />
+    </apex:pageblock>
+        </apex:form>
+</apex:page>
